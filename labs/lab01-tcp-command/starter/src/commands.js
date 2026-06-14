@@ -12,21 +12,20 @@ export function handleCommand(line) {
         case "ECHO":
             return argument;
 
-        // TODO: implement UPPER
-        // Example:
-        // UPPER hello -> HELLO
+        case "ECHO":
+            return argument;
 
-        // TODO: implement LOWER
-        // Example:
-        // LOWER HELLO -> hello
+        case "UPPER":
+            return argument.toUpperCase();
 
-        // TODO: implement REVERSE
-        // Example:
-        // REVERSE hello -> olleh
+        case "LOWER":
+            return argument.toLowerCase();
 
-        // TODO: implement TIME
-        // Example:
-        // TIME -> current server time
+        case "REVERSE":
+            return argument.split("").reverse().join("");
+
+        case "TIME":
+            return new Date().toString();
 
         case "QUIT":
             return "Goodbye.";
