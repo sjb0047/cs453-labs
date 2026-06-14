@@ -269,10 +269,19 @@ npm run test:watch
 Answer the following questions in your submission:
 
 1. What is the difference between a TCP message and an HTTP request?
+  The difference between the two is that a TCP message is raw data sent between two endpoints over a TCP connection, while an HTTP request is a structured message sent over TCP that includes a method, path, headers, and optional body.
+
 2. What does the `Content-Type: application/json` header tell the server?
+  The header tells the server that the request body contains JSON data and should be parsed as JSON.
+
 3. Why should a server return different HTTP status codes for different situations?
+  Different status codes allow clients to determine whether a request succeeded or failed, and understand the reason for the result.
+
 4. What happens if the client sends invalid JSON?
+  The server should reject the request, return an error response, and try to avoid crashing.
+
 5. How is this lab different from Lab 1?
+  Lab 1 used raw TCP sockets and custom commands. Lab 2 uses HTTP requests, status codes, headers, and JSON data.
 
 ## Graduate Students
 
